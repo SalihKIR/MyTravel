@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4754F31280C04E7009900CA /* ShowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4754F30280C04E7009900CA /* ShowVC.swift */; };
+		D4754F33280C0511009900CA /* ShowBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4754F32280C0511009900CA /* ShowBoard.storyboard */; };
 		D4EA4A7D28081F2D00E91216 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EA4A7C28081F2D00E91216 /* AppDelegate.swift */; };
 		D4EA4A7F28081F2D00E91216 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EA4A7E28081F2D00E91216 /* SceneDelegate.swift */; };
 		D4EA4A8128081F2D00E91216 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EA4A8028081F2D00E91216 /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D4754F30280C04E7009900CA /* ShowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowVC.swift; sourceTree = "<group>"; };
+		D4754F32280C0511009900CA /* ShowBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShowBoard.storyboard; sourceTree = "<group>"; };
 		D4EA4A7928081F2D00E91216 /* mYTRAVEL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mYTRAVEL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4EA4A7C28081F2D00E91216 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4EA4A7E28081F2D00E91216 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +43,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D4754F2C280C03EC009900CA /* Extantion */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extantion;
+			sourceTree = "<group>";
+		};
+		D4754F2E280C0445009900CA /* VcContoroller */ = {
+			isa = PBXGroup;
+			children = (
+				D4EA4A8228081F2D00E91216 /* Main.storyboard */,
+				D4EA4A8028081F2D00E91216 /* ViewController.swift */,
+				D4754F32280C0511009900CA /* ShowBoard.storyboard */,
+				D4754F30280C04E7009900CA /* ShowVC.swift */,
+			);
+			path = VcContoroller;
+			sourceTree = "<group>";
+		};
+		D4754F2F280C0469009900CA /* CoreDATA */ = {
+			isa = PBXGroup;
+			children = (
+				D4EA4A8528081F2D00E91216 /* mYTRAVEL.xcdatamodeld */,
+				D4EA4A8D28081F2E00E91216 /* Info.plist */,
+			);
+			path = CoreDATA;
+			sourceTree = "<group>";
+		};
 		D4EA4A7028081F2D00E91216 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +89,13 @@
 		D4EA4A7B28081F2D00E91216 /* mYTRAVEL */ = {
 			isa = PBXGroup;
 			children = (
+				D4754F2E280C0445009900CA /* VcContoroller */,
 				D4EA4A7C28081F2D00E91216 /* AppDelegate.swift */,
 				D4EA4A7E28081F2D00E91216 /* SceneDelegate.swift */,
-				D4EA4A8228081F2D00E91216 /* Main.storyboard */,
-				D4EA4A8028081F2D00E91216 /* ViewController.swift */,
+				D4754F2C280C03EC009900CA /* Extantion */,
 				D4EA4A8828081F2E00E91216 /* Assets.xcassets */,
 				D4EA4A8A28081F2E00E91216 /* LaunchScreen.storyboard */,
-				D4EA4A8D28081F2E00E91216 /* Info.plist */,
-				D4EA4A8528081F2D00E91216 /* mYTRAVEL.xcdatamodeld */,
+				D4754F2F280C0469009900CA /* CoreDATA */,
 			);
 			path = mYTRAVEL;
 			sourceTree = "<group>";
@@ -128,6 +158,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4754F33280C0511009900CA /* ShowBoard.storyboard in Resources */,
 				D4EA4A8C28081F2E00E91216 /* LaunchScreen.storyboard in Resources */,
 				D4EA4A8928081F2E00E91216 /* Assets.xcassets in Resources */,
 				D4EA4A8428081F2D00E91216 /* Main.storyboard in Resources */,
@@ -144,6 +175,7 @@
 				D4EA4A8128081F2D00E91216 /* ViewController.swift in Sources */,
 				D4EA4A8728081F2D00E91216 /* mYTRAVEL.xcdatamodeld in Sources */,
 				D4EA4A7D28081F2D00E91216 /* AppDelegate.swift in Sources */,
+				D4754F31280C04E7009900CA /* ShowVC.swift in Sources */,
 				D4EA4A7F28081F2D00E91216 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

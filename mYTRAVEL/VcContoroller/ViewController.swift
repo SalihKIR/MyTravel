@@ -77,6 +77,7 @@ class ViewController: UIViewController , MKMapViewDelegate , CLLocationManagerDe
     
    
     @IBAction func saveButtonAction(_ sender: Any) {
+        //Core Data model oluşumu
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let newPlace = NSEntityDescription.insertNewObject(forEntityName: "Entity", into: context)
@@ -92,6 +93,7 @@ class ViewController: UIViewController , MKMapViewDelegate , CLLocationManagerDe
         } catch{
             print("NO")
         }
+        // Core Data final
     }
 }
 
