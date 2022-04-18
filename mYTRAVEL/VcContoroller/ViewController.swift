@@ -14,6 +14,10 @@ class ViewController: UIViewController , MKMapViewDelegate , CLLocationManagerDe
     var chosenlongitude = Double()
     override func viewDidLoad() {
         super.viewDidLoad()
+        //For-NavigatorContorllerbar startded
+        navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.search, target: self, action: #selector(barSearchButton))
+        //
+        //For-MapKit
         mapVC.delegate = self
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest // Location için en iyi tahmin  parametresi.
@@ -23,7 +27,7 @@ class ViewController: UIViewController , MKMapViewDelegate , CLLocationManagerDe
         let gestureRecognizer = UILongPressGestureRecognizer(target: self, action:#selector(choselotation(gestureRecognizer:)))
             gestureRecognizer.minimumPressDuration = 3
         mapVC.addGestureRecognizer(gestureRecognizer)
-        
+        //
         //Textfiell designer
         nameTextfield.isEnabled = true
         nameTextfield.text = text
@@ -75,7 +79,7 @@ class ViewController: UIViewController , MKMapViewDelegate , CLLocationManagerDe
         mapVC.setRegion(region, animated: true) // haritanın set edilme işlemi gerçekleştirildi.
     }
     
-   
+   //Coredata kayıt bölümü
     @IBAction func saveButtonAction(_ sender: Any) {
         //Core Data model oluşumu
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -93,7 +97,14 @@ class ViewController: UIViewController , MKMapViewDelegate , CLLocationManagerDe
         } catch{
             print("NO")
         }
+        let detailVC = ShowVC.instantiate(storyboard: .details)
+        navigationController?.pushViewController(detailVC, animated: true)
         // Core Data final
+    }
+    //Navigator contorller bar item func
+    @objc func barSearchButton(){
+        let detailVC = ShowVC.instantiate(storyboard: .details)
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 }
 

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		D4754F31280C04E7009900CA /* ShowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4754F30280C04E7009900CA /* ShowVC.swift */; };
 		D4754F33280C0511009900CA /* ShowBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4754F32280C0511009900CA /* ShowBoard.storyboard */; };
+		D4CC075C280D332900A5AF8B /* ShowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC075A280D332900A5AF8B /* ShowCell.swift */; };
+		D4CC075D280D332900A5AF8B /* ShowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4CC075B280D332900A5AF8B /* ShowCell.xib */; };
+		D4CC075F280D3A5300A5AF8B /* ViewControllerExtantion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC075E280D3A5300A5AF8B /* ViewControllerExtantion.swift */; };
 		D4EA4A7D28081F2D00E91216 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EA4A7C28081F2D00E91216 /* AppDelegate.swift */; };
 		D4EA4A7F28081F2D00E91216 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EA4A7E28081F2D00E91216 /* SceneDelegate.swift */; };
 		D4EA4A8128081F2D00E91216 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EA4A8028081F2D00E91216 /* ViewController.swift */; };
@@ -21,6 +24,9 @@
 /* Begin PBXFileReference section */
 		D4754F30280C04E7009900CA /* ShowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowVC.swift; sourceTree = "<group>"; };
 		D4754F32280C0511009900CA /* ShowBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShowBoard.storyboard; sourceTree = "<group>"; };
+		D4CC075A280D332900A5AF8B /* ShowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCell.swift; sourceTree = "<group>"; };
+		D4CC075B280D332900A5AF8B /* ShowCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowCell.xib; sourceTree = "<group>"; };
+		D4CC075E280D3A5300A5AF8B /* ViewControllerExtantion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtantion.swift; sourceTree = "<group>"; };
 		D4EA4A7928081F2D00E91216 /* mYTRAVEL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mYTRAVEL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4EA4A7C28081F2D00E91216 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4EA4A7E28081F2D00E91216 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +52,7 @@
 		D4754F2C280C03EC009900CA /* Extantion */ = {
 			isa = PBXGroup;
 			children = (
+				D4CC075E280D3A5300A5AF8B /* ViewControllerExtantion.swift */,
 			);
 			path = Extantion;
 			sourceTree = "<group>";
@@ -65,9 +72,17 @@
 			isa = PBXGroup;
 			children = (
 				D4EA4A8528081F2D00E91216 /* mYTRAVEL.xcdatamodeld */,
-				D4EA4A8D28081F2E00E91216 /* Info.plist */,
 			);
 			path = CoreDATA;
+			sourceTree = "<group>";
+		};
+		D4CC0759280D32F000A5AF8B /* ShowCell */ = {
+			isa = PBXGroup;
+			children = (
+				D4CC075A280D332900A5AF8B /* ShowCell.swift */,
+				D4CC075B280D332900A5AF8B /* ShowCell.xib */,
+			);
+			path = ShowCell;
 			sourceTree = "<group>";
 		};
 		D4EA4A7028081F2D00E91216 = {
@@ -89,12 +104,14 @@
 		D4EA4A7B28081F2D00E91216 /* mYTRAVEL */ = {
 			isa = PBXGroup;
 			children = (
+				D4CC0759280D32F000A5AF8B /* ShowCell */,
 				D4754F2E280C0445009900CA /* VcContoroller */,
-				D4EA4A7C28081F2D00E91216 /* AppDelegate.swift */,
-				D4EA4A7E28081F2D00E91216 /* SceneDelegate.swift */,
 				D4754F2C280C03EC009900CA /* Extantion */,
 				D4EA4A8828081F2E00E91216 /* Assets.xcassets */,
+				D4EA4A7C28081F2D00E91216 /* AppDelegate.swift */,
+				D4EA4A7E28081F2D00E91216 /* SceneDelegate.swift */,
 				D4EA4A8A28081F2E00E91216 /* LaunchScreen.storyboard */,
+				D4EA4A8D28081F2E00E91216 /* Info.plist */,
 				D4754F2F280C0469009900CA /* CoreDATA */,
 			);
 			path = mYTRAVEL;
@@ -158,6 +175,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4CC075D280D332900A5AF8B /* ShowCell.xib in Resources */,
 				D4754F33280C0511009900CA /* ShowBoard.storyboard in Resources */,
 				D4EA4A8C28081F2E00E91216 /* LaunchScreen.storyboard in Resources */,
 				D4EA4A8928081F2E00E91216 /* Assets.xcassets in Resources */,
@@ -172,8 +190,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4CC075C280D332900A5AF8B /* ShowCell.swift in Sources */,
 				D4EA4A8128081F2D00E91216 /* ViewController.swift in Sources */,
 				D4EA4A8728081F2D00E91216 /* mYTRAVEL.xcdatamodeld in Sources */,
+				D4CC075F280D3A5300A5AF8B /* ViewControllerExtantion.swift in Sources */,
 				D4EA4A7D28081F2D00E91216 /* AppDelegate.swift in Sources */,
 				D4754F31280C04E7009900CA /* ShowVC.swift in Sources */,
 				D4EA4A7F28081F2D00E91216 /* SceneDelegate.swift in Sources */,
