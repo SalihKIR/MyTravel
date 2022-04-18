@@ -32,10 +32,10 @@ class ViewController: UIViewController , MKMapViewDelegate , CLLocationManagerDe
         nameTextfield.isEnabled = true
         nameTextfield.text = text
         nameTextfield.layer.cornerRadius = 20.0
-        nameTextfield.layer.borderWidth = 1.0
+        //nameTextfield.layer.borderWidth = 1.0
         //nameTextfield.layer.borderColor = UIColor.red.cgColor
         locationTextField.layer.cornerRadius = 20.0
-        locationTextField.layer.borderWidth = 1.0
+        //locationTextField.layer.borderWidth = 1.0
         checktext()
         //Button
         saveButton.isHidden = false
@@ -106,5 +106,6 @@ class ViewController: UIViewController , MKMapViewDelegate , CLLocationManagerDe
         let detailVC = ShowVC.instantiate(storyboard: .details)
         navigationController?.pushViewController(detailVC, animated: true)
     }
+    //Finished
 }
 

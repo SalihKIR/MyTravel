@@ -1,10 +1,13 @@
 import UIKit
 
 class ShowCell: UITableViewCell {
+    
+    @IBOutlet weak var outSide: UIView!
     @IBOutlet weak var detailLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        outSide.layer.cornerRadius = 18
+        detailLabel.layer.cornerRadius = 25
     }
 
 }
