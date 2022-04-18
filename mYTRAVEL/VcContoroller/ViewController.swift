@@ -12,6 +12,9 @@ class ViewController: UIViewController , MKMapViewDelegate , CLLocationManagerDe
     var text = ""
     var chosenlatitude = Double()
     var chosenlongitude = Double()
+    //Seçilen row işlemleri
+    var selectedtitle = ""
+    var selectedtitleid : UUID?
     override func viewDidLoad() {
         super.viewDidLoad()
         //For-NavigatorContorllerbar startded
@@ -28,6 +31,18 @@ class ViewController: UIViewController , MKMapViewDelegate , CLLocationManagerDe
             gestureRecognizer.minimumPressDuration = 3
         mapVC.addGestureRecognizer(gestureRecognizer)
         //
+        
+        if selectedtitle != ""{
+            //CoreData
+//            let stringUUID = selectedtitleid!.uuidString
+//            print(stringUUID)
+        }
+        else {
+            //Add New İtem
+        }
+        
+        
+        
         //Textfiell designer
         nameTextfield.isEnabled = true
         nameTextfield.text = text
@@ -98,14 +113,20 @@ class ViewController: UIViewController , MKMapViewDelegate , CLLocationManagerDe
             print("NO")
         }
         let detailVC = ShowVC.instantiate(storyboard: .details)
+        detailVC.chosentitle = selectedtitle
+        detailVC.chosentitleid = selectedtitleid
         navigationController?.pushViewController(detailVC, animated: true)
         // Core Data final
     }
     //Navigator contorller bar item func
     @objc func barSearchButton(){
         let detailVC = ShowVC.instantiate(storyboard: .details)
+        selectedtitle = ""
         navigationController?.pushViewController(detailVC, animated: true)
     }
     //Finished
+    
+    //Veri çekme veri gönderme
+
 }
 
